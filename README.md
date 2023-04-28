@@ -3,5 +3,8 @@
 een simpel investeer spelletje.
 natuurlijk nog in Alpha.
 
-## nog te doen:
-  - stocks afmaken
+## problemen:
+  - laat bij de waarde van elke stock "undefined" zien.
+  
+## nog willen toevoegen:
+    
