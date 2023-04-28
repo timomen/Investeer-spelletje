@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investeer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a id="navhome" class="active" onclick="switchpage('home')">Home</a>
+        <a id="navbank" onclick="switchpage('bank')">Bank</a>
+        <a id="navstocks" onclick="switchpage('stocks')">Stocks</a>
+        <a id="navdevtools" onclick="switchpage('devtools')">Devtools</a>
+    </div>
+
+    <div id="home">
+        <h1 class="h1" id="money">100</h1>
+    </div>
+    <div id="bank">
+        <h1 class="h1">Bank</h1>
+        <span>Huidig geinvesteerd: </span><span id="currentbankbalance">0</span>
+        <a id="bankmodalopenbtn" class="button buttontop">Storten/opnemen</a>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="bankmodalbuttons">
+                    <button onclick="bankmodalbuttonpress('deposit')">Storten</button>
+                    <button onclick="bankmodalbuttonpress('withdraw')">Opnemen</button>
+                </div>
+                <div id="deposit">
+                    <input type="number" placeholder="aantal om te storten..." id="bankmodaldepositinput">
+                    <button id="bankmodaldepositbutton">Storten</button><button id="bankmodaldepositallbutton">alles storten</button>
+                </div>
+                <div id="withdraw">
+                    <input type="number" placeholder="aantal om te opnemen..." id="bankmodalwithdrawinput">
+                    <button id="bankmodalwithdrawbutton">Opnemen</button><button id="bankmodalwithdrawallbutton">alles opnemen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="stocks">
+        <h1 class="h1">Stocks</h1>
+        <div id="stocknames"></div>
+        <div id="stockdatacontainer">
+            <h2 class="h2" id="stockdataname">name</h2>
+            <h3 class="h3" id="stockdataworth">worth</h3>
+            <h4 class="h4" id="stockdatapricechange">change</h4>
+        </div>
+    </div>
+
+    <div id="devtools">
+        <br>
+        <button>refresh</button><br>
+        <input type="number" placeholder="Money" id="devtoolsmoney"><button onclick="devtoolsupdatemoney()">Update</button>
+        <input type="number" placeholder="In bank" id="devtoolsinbank"><button onclick="devtoolsupdateinbank()">Update</button>
+        <br><button onclick="alert(random_item(allfakecompanynames))">willekeurig bedrijfnaam</button>
+        <button onclick="newstocks()">nieuwe stocks</button>
+        <button onlclick="updatestocks()">update stocks</button>
+        <h3>logs</h3>
+        <div id="logs"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
